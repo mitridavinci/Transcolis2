@@ -1,0 +1,65 @@
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+	<div class="wrapper wrapper--w680">
+		<div class="card card-4">
+			<div class="card-body">
+				<h2 class="title">Nouveau Client</h2>
+				<form [formGroup]="clientForm" (ngSubmit)="onSaveClient()">
+					<div class="row row-space">
+						<div class="col-2">
+							<div class="input-group">
+								<label class="label" for="clientFirstName">Nom Client</label>
+								<input class="form-control" type="text" id="clientFirstName" formControlName="clientFirstName">
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="input-group">
+								<label class="label" for="clientLastName">Prenom Client </label>
+								<input class="form-control" type="text" id="clientLastName" formControlName="clientLastName">
+							</div>
+						</div>
+					</div>
+					<div class="row row-space">
+						<div class="col-2">
+							<div class="input-group">
+								<label class="label" for="clientTel">Numero de Telephone </label>
+								<input class="form-control" type="text" id="clientTel" formControlName="clientTel">
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="col-2">
+								<div class="input-group">
+									<label class="label" for="clientEmail">Email Client </label>
+									<input class="form-control" type="text" id="clientEmail" formControlName="clientEmail">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row row-space">
+						<div class="col-2">
+							<div class="col-2">
+								<div class="input-group">
+									<label class="label" for="clientVille">Lieu de Residence </label>
+									<input class="form-control" type="text" id="clientVille" formControlName="clientVille">
+								</div>
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="col-2">
+								<div class="input-group">
+									<label class="label" for="numeroCNI">Numero CNI </label>
+									<input class="form-control" type="text" id="numeroCNI" formControlName="numeroCNI">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="p-t-15">
+						<button class="btn btn--radius-2 btn--blue"[disabled]="clientForm.invalid" type="submit">Enregitrer</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+

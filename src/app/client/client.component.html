@@ -1,0 +1,59 @@
+<nav aria-label="...">
+	<ul class="pager">
+
+	  <li class="next"><a (click)="onNewClient()">Nouveau Client<span aria-hidden="true">&rarr;</span></a></li>
+	</ul>
+</nav>
+
+<form class="navbar-form navbar-right">
+	<div class="form-group">
+	  <input type="text" class="form-control" placeholder="Rechercher">
+	</div>
+	<button type="submit" class="btn btn-success">Rechercher</button>
+ </form>
+<div class="panel panel-default">
+	<!-- Default panel contents -->
+	<div class="panel-heading">LISTINGS DES CLIENTS</div>
+	<!-- Table -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>NumeroCNI</th>
+				<th>Nom Client</th>
+				<th>Prenom Client</th>
+				<th>Telephone Client</th>
+				<th>Email Client</th>
+				<th>Ville Client</th>
+				<th><span class="glyphicon glyphicon-remove"></span></th>
+		</thead>
+	
+		<tr  *ngFor="let client of clients; let i = index"
+		(click)="onViewClient(i)">
+			<td>
+				{{client.numeroCNI}}	
+			</td>
+			<td>
+				{{client.clientFirstName}}
+			</td>
+			<td>
+				{{client.clientLastName}}
+			</td>
+			<td>
+				{{client.clientTel}}
+			</td>
+			<td>
+				{{client.clientEmail}}
+			</td>
+			<td>	
+				{{client.clientVille}}
+			</td>
+			<td>
+				<button class="btn btn-default pull-right"(click)="onDeleteClient(client)">
+					<span class="glyphicon glyphicon-remove"></span>
+				</button>
+			</td>
+		</tr>
+		
+	</table>
+</div>
+  

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+	 
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<ul class="nav navbar-nav">
+			<li routerLinkActive="active" class="nav-item">
+				<a routerLink="client" class="nav-link">Client</a>
+		  </li>
+		  <li routerLinkActive="active" class="nav-item">
+			<a routerLink="facture" class="nav-link active" aria-current="page">Facturation</a>
+		  </li>
+		  <li routerLinkActive="active" class="nav-item">
+			<a routerLink="colis" class="nav-link">Gestion de Colis</a>
+		  </li>
+		  <li routerLinkActive="active" class="nav-item">
+			<a routerLink="voyage" class="nav-link">Voyage</a>
+		  </li>
+		  <li routerLinkActive="active" class="nav-item">
+			<a routerLink="vehicule" class="nav-link">Vehicule</a>
+		  </li> 
+		</ul>
+		
+		<ul class="nav navbar-nav navbar-right">
+			<li routerLinkActive="active" class="nav-item">
+				<a routerLink="regisseur" class="nav-link">Regisseur</a>
+			</li>
+			<li routerLinkActive="active" class="nav-item">
+				<a routerLink="structure" class="nav-link">Structure</a>
+			</li> 
+			<li routerLinkActive="active" class="nav-item">
+				<a routerLink="administrateur" class="nav-link">Admin</a>
+			</li>
+			<li routerLinkActive="active" class="nav-item" *ngIf="!isAuth">
+				<a routerLink="auth/signup" class="nav-link">Nouveau Compte</a>
+			</li>
+			<li routerLinkActive="active" class="nav-item">
+				<a routerLink="auth/signin" class="nav-link">Connexion</a>
+			</li>
+			<li>
+				<a (click)="onSignOut()" *ngIf="isAuth" style="cursor:pointer" class="nav-link">Déconnexion</a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+  

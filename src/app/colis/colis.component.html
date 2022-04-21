@@ -1,0 +1,58 @@
+<nav aria-label="...">
+	<ul class="pager">
+	  <li class="next"><a (click)="onNewColis()">Nouveau Client<span aria-hidden="true">&rarr;</span></a></li>
+	</ul>
+</nav>
+
+<form class="navbar-form navbar-right">
+	<div class="form-group">
+	  <input type="text" class="form-control" placeholder="Rechercher">
+	</div>
+	<button type="submit" class="btn btn-success">Rechercher</button>
+ </form>
+<div class="panel panel-default">
+	<!-- Default panel contents -->
+	<div class="panel-heading">ENSEMBLES DES ENREGISTREMENTS DE COLIS</div>
+	<!-- Table -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Nature Colis</th>
+				<th>Valeur Colis</th>
+				<th>villeDepartColis</th>
+				<th>destinationColis</th>
+				<th>destinataireColis</th>
+				<th>destinataireNumeros</th>
+				<th><span class="glyphicon glyphicon-remove"></span></th>
+		</thead>
+	
+		<tr  *ngFor="let colis of colis; let i = index"
+		(click)="onViewColis(i)">
+			<td>
+				{{colis.natureColis}}	
+			</td>
+			<td>
+				{{colis.valeurColis}}
+			</td>
+			<td>
+				{{colis.villeDepartColis}}
+			</td>
+			<td>
+				{{colis.destination}}
+			</td>
+			<td>
+				{{colis.destinataireColis}}
+			</td>
+			<td>	
+				{{colis.destinataireNumeros}}
+			</td>
+			<td>
+				<button class="btn btn-default pull-right"(click)="onDeleteColis(colis)">
+					<span class="glyphicon glyphicon-remove"></span>
+				</button>
+			</td>
+		</tr>
+		
+	</table>
+</div>
+  

@@ -1,0 +1,69 @@
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+	<div class="wrapper wrapper--w680">
+		<div class="card card-4">
+			<div class="card-body">
+				<h2 class="title">Enregistrement d'un nouveau Colis</h2>
+				<form [formGroup]="colisForm" (ngSubmit)="onSaveColis()">
+					<div class="row row-space">
+						<div class="col-2">
+							<div class="input-group">
+								<label class="label" for="valeurColis">Valeur Colis</label>
+								<input class="form-control" type="text" id="valeurColis" formControlName="valeurColis">
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="input-group">
+								<label class="label" for="natureColis">Nature Colis</label>
+								<input class="form-control" type="text" id="natureColis" formControlName="natureColis">
+							</div>
+						</div>
+					</div>
+					<div class="row row-space">
+						<div class="col-2">
+							<div class="input-group">
+								<label class="label" for="destination">Destination </label>
+								<input class="form-control" type="text" id="deststination" formControlName="destination">
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="col-2">
+								<div class="input-group">
+									<label class="label" for="destinataireColis">Destinataire</label>
+									<input class="form-control" type="text" id="destinataireColis" formControlName="destinataireColis">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row row-space">
+						<div class="col-2">
+							<div class="col-2">
+								<div class="input-group">
+									<label class="label" for="destinataireNumeros">Telephone Destinataire </label>
+									<input class="form-control" type="text" id="destinataireNumeros" formControlName="destinataireNumeros">
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="row row-space">
+						<div class="col-2">
+							<div class="col-2">
+								<div class="input-group">
+									<label class="label" for="villeDepartColis">Villedepart</label>
+									<input class="form-control" type="text" id="villeDepartColis" formControlName="villeDepartColis">
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+					<div class="p-t-15">
+						<button class="btn btn--radius-2 btn--blue"[disabled]="colisForm.invalid" type="submit">Enregitrer</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
